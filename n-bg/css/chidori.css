@@ -1,0 +1,95 @@
+body { background:url(../bilder/design/chidori/bg.png) repeat-x; background-color:#4189c0;}
+.arrowlof a{   
+background:url(../bilder/design/chidori/arrowlof.png);     
+}    
+.arrowlof a:hover{   
+background:url(../bilder/design/chidori/arrowlh.png); 
+}
+.arrowlon a{  
+background:url(../bilder/design/chidori/arrowlon.png);  
+} 
+.arrowrof a{  
+background:url(../bilder/design/chidori/arrowrof.png);     
+}    
+.arrowrof a:hover{   
+background:url(../bilder/design/chidori/arrowrh.png); 
+}
+.arrowron a{  
+background:url(../bilder/design/chidori/arrowron.png);      
+}  
+.button {
+background: url(../bilder/design/chidori/up.png) no-repeat top left;
+}   
+.button:active {
+background: url(../bilder/design/chidori/down.png) no-repeat top left;
+}
+.button2 {
+background: url(../bilder/design/chidori/up2.png) no-repeat top left;
+}   
+.button2:active {
+background: url(../bilder/design/chidori/down2.png) no-repeat top left;
+}
+.button3 {
+background: url(../bilder/design/chidori/up3.png) no-repeat top left;
+}   
+.button3:active {
+background: url(../bilder/design/chidori/down3.png) no-repeat top left;
+}
+.textfield2
+{
+background: url(../bilder/design/chidori/textfield.png) no-repeat;
+}
+.eingabe1
+{
+background: url(../bilder/design/chidori/eingabe.png) no-repeat;
+}
+.eingabe3
+{
+background: url(../bilder/design/chidori/eingabe2.png) no-repeat;
+}
+.eingabe5
+{
+background: url(../bilder/design/chidori/eingabe3.png) no-repeat;
+}
+.ltc{
+background:url(../bilder/design/chidori/lefttopc.png);
+}
+.lt{
+background:url(../bilder/design/chidori/lefttop.png);
+}
+.lm{
+background:url(../bilder/design/chidori/leftmit.png);
+}
+.lb{
+background:url(../bilder/design/chidori/leftbot.png);
+}
+.rth{
+background:url(../bilder/design/chidori/rechtstoph.png);
+}
+.rt{
+background:url(../bilder/design/chidori/rechtstop.png);
+}
+.rm{
+background:url(../bilder/design/chidori/rechtsmit.png);
+}
+.rb{
+background:url(../bilder/design/chidori/rechtsbot.png);
+}
+.olb{
+background:url(../bilder/design/chidori/topl.png);
+}
+.omb{
+background:url(../bilder/design/chidori/topm.png);
+}
+.orb{
+background:url(../bilder/design/chidori/topr.png);
+}
+A:link {color: #fff; }
+A:visited {color: #fff; }
+A:active {color: #fff; }
+A:hover {color: #000; text-shadow: 0px 0px 5px #fff;}   
+A.blink{color: #f00000;}
+.footer{color:#fff;}
+.auswahl{color: #fff;  background: url(../bilder/design/auswahlp.png) no-repeat right #4a84b4;}
+.auswahl2{color: #fff;  background: url(../bilder/design/auswahlp.png) no-repeat right #4a84b4;}
+.statsadd{color:#33cc33;}

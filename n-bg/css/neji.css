@@ -1,0 +1,95 @@
+body { background:url(../bilder/design/neji/bg.png) repeat-x; background-color:#e0e2e4;}
+.arrowlof a{   
+background:url(../bilder/design/neji/arrowlof.png);     
+}    
+.arrowlof a:hover{   
+background:url(../bilder/design/neji/arrowlh.png); 
+}
+.arrowlon a{  
+background:url(../bilder/design/neji/arrowlon.png);  
+} 
+.arrowrof a{  
+background:url(../bilder/design/neji/arrowrof.png);     
+}    
+.arrowrof a:hover{   
+background:url(../bilder/design/neji/arrowrh.png); 
+}
+.arrowron a{  
+background:url(../bilder/design/neji/arrowron.png);      
+}  
+.button {
+background: url(../bilder/design/neji/up.png) no-repeat top left;
+}   
+.button:active {
+background: url(../bilder/design/neji/down.png) no-repeat top left;
+}
+.button2 {
+background: url(../bilder/design/neji/up2.png) no-repeat top left;
+}   
+.button2:active {
+background: url(../bilder/design/neji/down2.png) no-repeat top left;
+}
+.button3 {
+background: url(../bilder/design/neji/up3.png) no-repeat top left;
+}   
+.button3:active {
+background: url(../bilder/design/neji/down3.png) no-repeat top left;
+}
+.textfield2
+{
+background: url(../bilder/design/neji/textfield.png) no-repeat;
+}
+.eingabe1
+{
+background: url(../bilder/design/neji/eingabe.png) no-repeat;
+}
+.eingabe3
+{
+background: url(../bilder/design/neji/eingabe2.png) no-repeat;
+}
+.eingabe5
+{
+background: url(../bilder/design/neji/eingabe3.png) no-repeat;
+}
+.ltc{
+background:url(../bilder/design/neji/lefttopc.png);
+}
+.lt{
+background:url(../bilder/design/neji/lefttop.png);
+}
+.lm{
+background:url(../bilder/design/neji/leftmit.png);
+}
+.lb{
+background:url(../bilder/design/neji/leftbot.png);
+}
+.rth{
+background:url(../bilder/design/neji/rechtstoph.png);
+}
+.rt{
+background:url(../bilder/design/neji/rechtstop.png);
+}
+.rm{
+background:url(../bilder/design/neji/rechtsmit.png);
+}
+.rb{
+background:url(../bilder/design/neji/rechtsbot.png);
+}
+.olb{
+background:url(../bilder/design/neji/topl.png);
+}
+.omb{
+background:url(../bilder/design/neji/topm.png);
+}
+.orb{
+background:url(../bilder/design/neji/topr.png);
+}
+A:link {color: #000090; }
+A:visited {color: #000090; }
+A:active {color: #0000ff; }
+A:hover {color: #0000ff; text-shadow: 0px 0px 5px #fff;}
+A.blink{color: #f00000;}
+.footer{color:#000;}
+.auswahl{color: #fff;  background: url(../bilder/design/auswahlp.png) no-repeat right #93908d;}
+.auswahl2{color: #fff;  background: url(../bilder/design/auswahlp.png) no-repeat right #93908d;}
+.statsadd{color:#33bb33;}

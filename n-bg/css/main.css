@@ -1,0 +1,1126 @@
+.slidercontainer
+{
+  width:200px;
+  height:25px;
+  background: url('../bilder/design/sliderbg.png');
+}
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  background: #00000000;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 25px;
+  border: 0;
+  background: url('../bilder/design/sliderico.png');
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 25px;
+  border: 0;
+  background: url('../bilder/design/sliderico.png');
+  cursor: pointer;
+}
+.tnpc a{   
+background:url(../bilder/design/tnpcd.png);   
+width:350px;
+height:400px;      
+display:block;       
+}    
+.tnpc a:hover{   
+background:url(../bilder/design/tnpc.png); 
+}
+.snpc a{   
+background:url(../bilder/design/snpcd.png);   
+width:350px;
+height:400px;      
+display:block;      
+}    
+.snpc a:hover{   
+background:url(../bilder/design/snpc.png); 
+}
+.kzelle2{
+width:50px;
+height:50px; 
+position:absolute; 
+z-index:6;
+ width:50px;
+  height:50px;      
+  margin-top:-1px;
+  margin-left:-1px;
+}
+.kzelle{
+width:50px;
+height:50px; 
+position:absolute; 
+z-index:6;   
+  margin-top:-1px;
+  margin-left:-1px;         
+}
+.kzelle:hover{
+background:url(../bilder/krieg/zh.png);  
+}
+a.kinfo{
+    position:relative; /*this is the key*/
+    z-index:9;
+    text-decoration:none}
+
+a.kinfo:hover{z-index:10;}
+
+a.kinfo span{display: none}
+
+a.kinfo:hover span{ /*the span will display just on :hover state*/
+    display:block;
+    position:absolute;}
+.kmapinfo{  
+    left:60px;
+    border:1px solid #000;
+    width:200px;       
+    background-color:#fff;   
+    text-align: center
+}   
+
+.kmap{
+height:700px;
+width:700px; 
+background:url(../bilder/krieg/kkarte.jpg);
+position:relative;
+margin-top:50px;
+} 
+
+.kwege{     
+z-index:0;
+height:700px;
+width:700px; 
+background:url(../bilder/krieg/kmap.png);   
+position:absolute;
+}  
+
+
+.tuttext{
+left:339px;
+top:50px;
+width:391px;
+height:205px;   
+position:absolute;    
+display:block;    
+z-index:51;
+}                          
+.atut:link {color: #000090; }
+.atut:visited {color: #000090; }
+.atut:active {color: #0000ff; }
+.atut:hover {color: #0000ff; text-shadow: 0px 0px 5px #fff;}
+.atut.blink{color: #f00000;}
+.kdaten{
+width:250px;
+height:150px;
+display:block;
+background:url(../bilder/krieg/kinfo.png);
+position:fixed;
+z-index:50;
+}
+.kjoin{
+width:600px;
+height:300px;
+display:block;
+background:url(../bilder/krieg/kjoin.png);
+position:relative;
+z-index:50;
+}
+.tut{
+width:800px;
+height:760px;
+display:block;
+background:url(../bilder/design/tut.png);
+position:relative;
+z-index:50;
+
+}
+.tutbg{     
+top:0px;
+left:0px;
+width:100%;
+height:100%;
+display:block;
+background:url(../bilder/design/tutbg.png);
+position:fixed;
+text-align:center; 
+z-index:49;
+}
+
+.arrowlof a{   
+width:150px;
+height:70px;    
+display:block;
+}    
+.arrowlof a:hover{    
+}
+.arrowlon a{  
+width:150px;
+height:70px;      
+display:block;
+} 
+.arrowrof a{  
+width:150px;
+height:70px;     
+display:block;
+}    
+.arrowrof a:hover{   
+}
+.arrowron a{  
+width:150px;
+height:70px;    
+display:block;
+}   
+.one{
+display:block;
+height:100px;
+width:100px;
+background:url(../bilder/design/one.png);   
+} 
+.two{
+display:block;
+height:100px;
+width:100px;
+background:url(../bilder/design/two.png);   
+}
+.three{
+display:block;
+height:100px;
+width:100px;
+background:url(../bilder/design/three.png);   
+} 
+.sthree a{
+display:block;
+height:20px;
+width:20px;
+background:url(../bilder/design/sthree.png);   
+}
+.sthree a:hover{        
+background:url(../bilder/design/sthreeh.png);    
+}  
+.sthree a:active{        
+background:url(../bilder/design/sthreea.png);
+}
+.sthreen a{
+display:block;
+height:20px;
+width:20px;
+background:url(../bilder/design/sthreen.png);   
+}
+.sthreen a:hover{        
+background:url(../bilder/design/sthreenh.png);    
+}  
+.sthreen a:active{        
+background:url(../bilder/design/sthreena.png);
+}
+.stwo a{
+display:block;
+height:20px;
+width:20px;
+background:url(../bilder/design/stwo.png);   
+}
+.stwo a:hover{        
+background:url(../bilder/design/stwoh.png);    
+}  
+.stwo a:active{        
+background:url(../bilder/design/stwoa.png);
+}
+.stwon a{
+display:block;
+height:20px;
+width:20px;
+background:url(../bilder/design/stwon.png);   
+}
+.stwon a:hover{        
+background:url(../bilder/design/stwonh.png);    
+}  
+.stwon a:active{        
+background:url(../bilder/design/stwona.png);
+}
+.sone a{
+display:block;
+height:20px;
+width:20px;
+background:url(../bilder/design/sone.png);   
+}
+.sone a:hover{        
+background:url(../bilder/design/soneh.png);    
+}  
+.sone a:active{        
+background:url(../bilder/design/sonea.png);
+}
+.sonen a{
+display:block;
+height:20px;
+width:20px;
+background:url(../bilder/design/sonen.png);   
+}
+.sonen a:hover{        
+background:url(../bilder/design/sonenh.png);    
+}  
+.sonen a:active{        
+background:url(../bilder/design/sonena.png);
+}
+.srand a{
+display:block;
+height:100px;
+width:100px;
+background:url(../bilder/design/srand.png);   
+}
+.srand a:hover{        
+background:url(../bilder/design/srandh.png);    
+}  
+.srand a:active{        
+background:url(../bilder/design/sranda.png);
+}
+
+.male{
+width:300px;
+height:500px; 
+background:url(../bilder/design/male.png);    
+position:relative;
+}
+.female{
+width:300px;
+height:500px; 
+background:url(../bilder/design/female.png);    
+position:relative;
+}
+.slot{
+width:50px;
+height:50px; 
+background:url(../bilder/design/slot.png);    
+}
+.slot:hover{        
+background:url(../bilder/design/sloth.png);    
+}  
+.slot:active{        
+background:url(../bilder/design/slota.png);    
+}
+div#content_ecke {
+background-color:darkblue;
+}
+#reise{
+width:680px;
+height:412px;   
+background:url(../bilder/design/reise.jpg);       
+}
+
+.map{
+height:791px;
+width:1400px; 
+background:url(../bilder/map/welt.jpg);
+position:relative;
+margin-top:50px;
+}   
+
+.event1{
+height:480px;
+width:800px; 
+background:url(../bilder/map/event1.jpg);
+position:relative;
+margin-top:50px;
+}   
+
+.event1w{     
+z-index:0;
+height:480px;
+width:800px; 
+background:url(../bilder/map/event1w.png);   
+position:absolute;
+}   
+
+.event2{
+height:500px;
+width:500px; 
+background:url(../bilder/map/event2.jpg);
+position:relative;
+margin-top:50px;
+}   
+
+.event2w{     
+z-index:0;
+height:500px;
+width:500px; 
+background:url(../bilder/map/event2w.png);   
+position:absolute;
+}
+.event3{
+height:600px;
+width:1065px;
+background:url(../bilder/map/event3.jpg);
+position:relative;
+margin-top:50px;
+} 
+.event4{
+height:554px;
+width:985px;
+background:url(../bilder/map/event4.jpg);
+position:relative;
+margin-top:50px;
+} 
+.event5{
+height:562px;
+width:1000px;
+background:url(../bilder/map/event5.jpg?1);
+position:relative;
+margin-top:50px;
+} 
+.event6{
+height:576px;
+width:1024px;
+background:url(../bilder/map/event6.jpg?1);
+position:relative;
+margin-top:50px;
+} 
+.event7{
+height:576px;
+width:1024px;
+background:url(../bilder/map/event7.jpg?1);
+position:relative;
+margin-top:50px;
+} 
+.event8{
+height:480px;
+width:800px;
+background:url(../bilder/map/event8.jpg?1);
+position:relative;
+margin-top:50px;
+} 
+.event9{
+height:615px;
+width:1080px;
+background:url(../bilder/map/event9.jpg?1);
+position:relative;
+margin-top:50px;
+} 
+
+.dmissi a{   
+height:120px;
+width:120px;        
+background:url(../bilder/design/d.png);    
+display:block;
+}
+.dmissi a:hover{  
+background:url(../bilder/design/dh.png); 
+}   
+.dmissi a:active{  
+background:url(../bilder/design/da.png); 
+}
+.cmissi a{   
+height:120px;
+width:120px;        
+background:url(../bilder/design/c.png);    
+display:block;
+}
+.cmissi a:hover{  
+background:url(../bilder/design/ch.png); 
+}  
+.cmissi a:active{  
+background:url(../bilder/design/ca.png); 
+}
+.bmissi a{   
+height:120px;
+width:120px;        
+background:url(../bilder/design/b.png);    
+display:block;
+}
+.bmissi a:hover{  
+background:url(../bilder/design/bh.png); 
+}     
+.bmissi a:active{  
+background:url(../bilder/design/ba.png); 
+}
+.amissi a{   
+height:120px;
+width:120px;        
+background:url(../bilder/design/a.png);    
+display:block;
+}
+.amissi a:hover{  
+background:url(../bilder/design/ah.png); 
+} 
+.amissi a:active{  
+background:url(../bilder/design/aa.png); 
+}
+.smissi a{   
+height:120px;
+width:120px;        
+background:url(../bilder/design/s.png);    
+display:block;
+}
+.smissi a:hover{  
+background:url(../bilder/design/sh.png); 
+} 
+.smissi a:active{  
+background:url(../bilder/design/sa.png); 
+}
+.storym a{   
+height:120px;
+width:300px;        
+background:url(../bilder/design/story.png);    
+display:block;
+}
+.storym a:hover{  
+background:url(../bilder/design/storyh.png); 
+} 
+.storym a:active{  
+background:url(../bilder/design/storya.png); 
+}
+.eventm a{   
+height:100px;
+width:300px;        
+background:url(../bilder/design/event.png);    
+display:block;
+}
+.eventm a:hover{  
+background:url(../bilder/design/eventh.png); 
+} 
+.eventm a:active{  
+background:url(../bilder/design/eventa.png); 
+}
+.clanm a{   
+height:120px;
+width:300px;        
+background:url(../bilder/design/clan.png);    
+display:block;
+}
+.clanm a:hover{  
+background:url(../bilder/design/clanh.png); 
+} 
+.clanm a:active{  
+background:url(../bilder/design/clana.png); 
+}
+
+.wege{     
+z-index:0;
+height:791px;
+width:1400px; 
+background:url(../bilder/map/wege.png);   
+position:absolute;
+}   
+
+.mamissi{     
+height:25px;
+width:25px;
+background:url(../bilder/map/missi.png);   
+display:block;
+}   
+
+.kdorf{     
+height:25px;
+width:25px;
+display:block;
+}  
+
+.mdorf{     
+height:25px;
+width:25px;
+background:url(../bilder/map/dorf.png);   
+display:block;
+}
+.mdorf2 a{   
+height:25px;
+width:25px;   
+display:block;  
+background:none;   
+}
+
+.mchar1{    
+height:30px;
+width:20px;
+background:url(../bilder/map/char1.gif);   
+display:block;
+}
+
+.mchar2{     
+height:30px;
+width:20px;
+background:url(../bilder/map/char2.gif);   
+display:block;
+}
+
+.mchar3{     
+height:30px;
+width:20px;
+background:url(../bilder/map/char3.gif);   
+display:block;
+} 
+.mchar4{     
+height:42px;
+width:28px;
+background:url(../bilder/map/char4.gif);   
+display:block;
+}
+.mchar5{     
+height:32px;
+width:24px;
+background:url(../bilder/map/char5.gif);   
+display:block;
+}
+.mchar6{     
+height:30px;
+width:19px;
+background:url(../bilder/map/char6.gif);   
+display:block;
+}
+
+a.sinfo{
+    position:relative; /*this is the key*/
+    z-index:9;
+    text-decoration:none}
+
+a.sinfo:hover{z-index:10;}
+
+a.sinfo span{display: none}
+
+a.sinfo:hover span{ /*the span will display just on :hover state*/
+    display:block;
+    position:absolute;}
+.spanmap{  
+    top:10px; left:35px;
+    border:1px solid #000;
+    width:150px;   
+    background-color:#fff;   
+    text-align: center
+}
+.spanitem{  
+    top:51px; left:0px;
+    border:1px solid #000;
+    width:250px;   
+    background-color:#fff;   
+    text-align: center
+}
+.spanang{  
+    top:-60px; left:0px;
+    border:1px solid #000;
+    width:250px;      
+    background-color:#fff;   
+    text-align: center
+}
+.spanmenu{  
+    top:50px; left:0px;
+    border:1px solid #000;
+    width:95px;   
+    z-index:25;
+    background-color:#fff;  
+    text-align: center
+} 
+.spanmenu2{  
+    top:50px; left:-40px;
+    border:1px solid #000;
+    width:95px;   
+    z-index:25;
+    background-color:#fff;  
+    text-align: center
+}
+.mort{     
+height:25px;
+width:25px;
+background:url(../bilder/map/ort.png);  
+display:block;
+}
+.mort2 a{     
+height:25px;
+width:25px;     
+display:block; 
+background:none;  
+}
+
+.light{
+height:40px;
+width:40px;
+}
+.light2{
+height:25px;
+width:25px;
+}
+.light:hover{          
+background:url(../bilder/design/light.png);
+}
+.light2:hover{          
+background:url(../bilder/design/light2.png);
+}
+
+h3, h2, h1{
+color:#000;
+text-shadow: 1px 1px 5px #fff;
+}
+* {
+margin: 0;
+padding: 0;
+} 
+#oid{
+font-size:14px;
+margin-top:-8px;
+width:50px;
+height:10px;
+text-align:center;
+}
+.tblfixed{table-layout:fixed;word-wrap:break-word;}
+.tdoh{overflow:hidden;}
+
+.table{
+text-align: center;
+border-right-width:1px;
+border-right-style:solid;
+border-left-width:1px;
+border-left-style:solid; 
+border-bottom-width:1px;
+border-bottom-style:solid;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;    
+    table-layout: fixed;
+}
+.tdbr{   
+border-right-width:1px;
+border-right-style:solid;
+}
+.tdbo{       
+border-top-width:1px;
+border-top-style:solid;
+
+}
+.table2{
+text-align: center;
+border-width:1px;
+border-style:solid;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+}
+.newsbild{
+margin-top:5px;
+}
+.newsleft{
+text-align:left;
+}
+.tdbg{
+background-image:url(../bilder/design/blackbg.png);
+}
+.tdborder{
+border-top-width:1px;
+border-top-style:solid; 
+word-wrap:break-word;
+}
+.tdborder2{
+border-top-width:1px;
+border-top-style:solid;
+}
+.trborder{
+border-width:1px;
+border-style:solid;
+}   
+.chat{
+width:40px;
+height:40px;
+background-image:url(../bilder/design/chat.png);
+}    
+.support{
+width:50px;
+height:50px;
+background-image:url(../bilder/design/support.png);
+}  
+.mail{
+width:40px;
+height:40px;
+background-image:url(../bilder/design/mail.png);
+}
+.list{
+width:40px;
+height:40px;
+background-image:url(../bilder/design/list.png);
+}
+.friend{
+width:40px;
+height:40px;
+background-image:url(../bilder/design/friend.png);
+}
+.online{
+width:40px;
+height:40px;
+background-image:url(../bilder/design/online.png);
+}
+.news{
+width:50px;
+height:50px;
+text-align:center;
+background-image:url(../bilder/design/news.png);
+}
+.logout{
+width:50px;
+height:50px;
+text-align:center;
+background-image:url(../bilder/design/logout.png);
+}
+.forum{
+width:50px;
+height:50px;
+text-align:center;
+background-image:url(../bilder/design/forum.png);
+}
+.discord{
+width:50px;
+height:50px;
+text-align:center;
+background-image:url(../bilder/design/discord.png);
+}
+.dbbg{
+width:50px;
+height:50px;
+text-align:center;
+background-size: 100% 100%;
+background-image:url(../bilder/design/dbbg.png);
+}
+.info{
+width:50px;
+height:50px;
+text-align:center;
+background-image:url(../bilder/design/info.png);
+}
+.settings{
+width:50px;
+height:50px;
+text-align:center;
+background-image:url(../bilder/design/settings.png);
+}
+.mail2{
+margin-top:-10px;
+margin-left:5px;
+width:40px;
+height:10px;
+text-align:center;
+}     
+.bar{
+text-align:left;
+width:100px;
+height:15px;
+background-image:url(../bilder/design/bar.png);
+margin-bottom:2px;
+}
+.weg{
+text-align:left;
+width:200px;
+height:30px;
+background-image:url(../bilder/design/weg.png);
+}   
+.wegd{
+height:30px;
+background-image:url(../bilder/design/wegd.png);
+} 
+.exp{
+height:15px;
+background-image:url(../bilder/design/exp.png);
+}
+.hp{
+height:15px;
+background-image:url(../bilder/design/hp.png);
+}
+.chakra{
+height:15px;
+background-image:url(../bilder/design/chakra.png);
+}
+.ombutton a{
+display:block;
+height:60px;
+width:60px;
+text-align:center;
+background-image:url(../bilder/design/ombutton.png);
+margin-bottom:7px;
+}
+.ombutton a:hover {
+background-image:url(../bilder/design/ombuttonh.png);
+}   
+.omtable{
+border:0px;
+border-spacing:0px;
+width:100%;
+height:67px;
+}
+.space{
+border-spacing:10px
+}
+
+.shadow {
+color:#000;
+text-shadow: 1px 1px 5px #fff;
+}   
+.shadowh{
+color:#000;
+}
+.shadowh:hover{
+text-shadow: 1px 1px 5px #fff;
+}
+#textdiv{
+width:100%;
+height:100px;
+}
+#textdiv2{
+width:100%;
+height:100px;
+margin-top:25px;
+}
+.relativ
+{
+position:relative;
+}
+
+body	{margin-top:0px; margin-right:0px; margin-left:0px; margin-bottom:0px; cursor: url(../bilder/design/cursor.ani), url(../bilder/design/cursor.png), auto !important; }
+a {cursor: url(../bilder/design/cursora.ani), url(../bilder/design/cursora.png), auto !important;}
+
+
+.eingabe1
+{
+width: 182px;
+height: 27px;
+}
+.auswahl
+{        
+border: 1px solid #000; 
+font-size: 14px; 
+color: #fff;     
+   width: 180px;
+   height: 25px;
+   overflow: hidden; 
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;  
+cursor: url(../bilder/design/cursora.ani), url(../bilder/design/cursora.png), auto !important;
+}
+.auswahl select {
+background:transparent;
+   width: 210px;
+   padding: 5px;
+   font-size: 16px;
+   border: 0px solid #000;
+   height: 30px;   
+cursor: url(../bilder/design/cursora.ani), url(../bilder/design/cursora.png), auto !important;
+}
+.auswahl2
+{        
+border: 1px solid #000; 
+font-size: 14px; 
+color: #fff;     
+   width: 50px;
+   height: 25px;  
+   overflow: hidden; 
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+cursor: url(../bilder/design/cursora.ani), url(../bilder/design/cursora.png), auto !important;
+}
+.auswahl2 select {
+background:transparent;
+   width: 75px;
+   padding: 5px;
+   font-size: 16px;
+   border: 0px solid #000;
+   height: 30px;   
+cursor: url(../bilder/design/cursora.ani), url(../bilder/design/cursora.png), auto !important;
+}
+.eingabe3
+{
+width: 300px;
+height: 27px;
+}
+.eingabe4
+{
+width: 290px;
+height: 22px;
+background: none;
+border: none;
+color: #000000;
+margin-top: 5px;
+margin-left: 5px;
+cursor: url(../bilder/design/cursors.cur), auto !important;
+}
+.hoch{
+margin-bottom:6px; 
+font-size:14px;
+}
+.eingabe5
+{
+width: 30px;
+height: 27px;
+}
+.eingabe6
+{
+width: 20px;
+height: 22px;
+background: none;
+border: none;
+color: #000000;
+margin-top: 5px;
+margin-left: 5px;
+cursor: url(../bilder/design/cursors.cur), auto !important;
+}
+.eingabe2
+{
+width: 170px;
+height: 22px;
+background: none;
+border: none;
+color: #000000;
+margin-top: 5px;
+margin-left: 5px;
+cursor: url(../bilder/design/cursors.cur), auto !important;
+}
+.textfield2
+{
+width: 300px;
+height: 200px;
+}
+.textfield
+{
+width: 290px;
+height: 190px;
+margin-top: 5px;
+margin-left: 5px;
+background: none;
+border: none;
+color: #000000;
+resize: none;
+cursor: url(../bilder/design/cursors.cur), auto !important;
+}
+.button {
+width: 182px;
+height: 27px;
+border: none;
+padding: 2px 8px;
+cursor: url(../bilder/design/cursora.ani), url(../bilder/design/cursora.png), auto !important;
+}
+.button2 {
+width: 120px;
+height: 27px;
+border: none;
+padding: 2px 8px;
+cursor: url(../bilder/design/cursora.ani), url(../bilder/design/cursora.png), auto !important;
+}
+.button3 {
+width: 30px;
+height: 27px;
+border: none;
+padding: 2px 8px;
+cursor: url(../bilder/design/cursora.ani), url(../bilder/design/cursora.png), auto !important;
+}
+.cursor {
+cursor: url(../bilder/design/cursora.ani), url(../bilder/design/cursora.png), auto !important;
+}
+.ltc
+{
+height:120px;
+}
+.lt
+{
+height:20px;
+}
+.lmc
+{
+text-align:center;
+vertical-align:top;
+margin-left:7px;
+width:160px;
+}
+.lb
+{
+height:20px;
+}
+.rechtsmitte
+{
+margin-left:20px;
+width:740px;
+}
+.container
+{
+min-height:590px;
+height:auto !important;
+height:590px;    
+}
+.rth
+{
+height:120px;
+}
+.rt
+{
+height:20px;
+}
+.rm
+{
+text-align:center;
+vertical-align:top;
+}
+.rb
+{
+height:20px;
+}
+.fixed
+{
+position:fixed;
+}
+.links
+{           
+width:175px;
+}
+.spalt
+{
+width:120px;
+}
+.rechts
+{
+width:780px;
+vertical-align:top;
+}
+.rand{
+width:420px;
+}
+.rand2{
+width:10%;
+}
+.oben {
+width:100%;
+height:67px;
+}
+.main1 {
+width:100%;
+height:67px;
+}
+.main2 {
+width:100%;
+}
+.login {
+width:600px;
+}
+.ol {
+width:50px;
+height:67px;
+}
+.om {                
+height:67px;
+min-width:1240px;
+width:auto !important;
+width:1240px;
+}
+.om2 {
+min-width:800px;
+width:auto !important;
+width:800px;
+}
+.or {
+width:50px;
+height:67px;
+}
+A:link {text-decoration: none; }
+A:visited {text-decoration: none; }
+A:active {text-decoration: none; }
+A:hover {text-decoration: none;}  
+  
+.gameinfo:link {color: #000000; text-decoration: none; }
+.gameinfo:visited {color: #000000; text-decoration: none; }
+.gameinfo:active {text-decoration: none; color: #000000; }
+.gameinfo:hover {text-decoration: none; color: #000000; text-shadow: 0px 0px 5px #fff;}

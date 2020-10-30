@@ -1,0 +1,95 @@
+body { background:url(../bilder/design/rocklee/bg.png) repeat-x; background-color:#aec3c4;}
+.arrowlof a{   
+background:url(../bilder/design/rocklee/arrowlof.png);     
+}    
+.arrowlof a:hover{   
+background:url(../bilder/design/rocklee/arrowlh.png); 
+}
+.arrowlon a{  
+background:url(../bilder/design/rocklee/arrowlon.png);  
+} 
+.arrowrof a{  
+background:url(../bilder/design/rocklee/arrowrof.png);     
+}    
+.arrowrof a:hover{   
+background:url(../bilder/design/rocklee/arrowrh.png); 
+}
+.arrowron a{  
+background:url(../bilder/design/rocklee/arrowron.png);      
+}  
+.button {
+background: url(../bilder/design/rocklee/up.png) no-repeat top left;
+}   
+.button:active {
+background: url(../bilder/design/rocklee/down.png) no-repeat top left;
+}
+.button2 {
+background: url(../bilder/design/rocklee/up2.png) no-repeat top left;
+}   
+.button2:active {
+background: url(../bilder/design/rocklee/down2.png) no-repeat top left;
+}
+.button3 {
+background: url(../bilder/design/rocklee/up3.png) no-repeat top left;
+}   
+.button3:active {
+background: url(../bilder/design/rocklee/down3.png) no-repeat top left;
+}
+.textfield2
+{
+background: url(../bilder/design/rocklee/textfield.png) no-repeat;
+}
+.eingabe1
+{
+background: url(../bilder/design/rocklee/eingabe.png) no-repeat;
+}
+.eingabe3
+{
+background: url(../bilder/design/rocklee/eingabe2.png) no-repeat;
+}
+.eingabe5
+{
+background: url(../bilder/design/rocklee/eingabe3.png) no-repeat;
+}
+.ltc{
+background:url(../bilder/design/rocklee/lefttopc.png);
+}
+.lt{
+background:url(../bilder/design/rocklee/lefttop.png);
+}
+.lm{
+background:url(../bilder/design/rocklee/leftmit.png);
+}
+.lb{
+background:url(../bilder/design/rocklee/leftbot.png);
+}
+.rth{
+background:url(../bilder/design/rocklee/rechtstoph.png);
+}
+.rt{
+background:url(../bilder/design/rocklee/rechtstop.png);
+}
+.rm{
+background:url(../bilder/design/rocklee/rechtsmit.png);
+}
+.rb{
+background:url(../bilder/design/rocklee/rechtsbot.png);
+}
+.olb{
+background:url(../bilder/design/rocklee/topl.png);
+}
+.omb{
+background:url(../bilder/design/rocklee/topm.png);
+}
+.orb{
+background:url(../bilder/design/rocklee/topr.png);
+}
+A:link {color: #000090; }
+A:visited {color: #000090; }
+A:active {color: #0000ff; }
+A:hover {color: #0000ff; text-shadow: 0px 0px 5px #fff;}
+A.blink{color: #f00000;}
+.footer{color:#000;}
+.auswahl{color: #000090;  background: url(../bilder/design/auswahlp.png) no-repeat right #789a91;}
+.auswahl2{color: #000090;  background: url(../bilder/design/auswahlp.png) no-repeat right #789a91;}
+.statsadd{color:#33cc33;}

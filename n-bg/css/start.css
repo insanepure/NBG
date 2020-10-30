@@ -1,0 +1,36 @@
+body { background:url(../bilder/design/naruto/bg.png) repeat-x; background-color:#;}
+
+.nbg {   
+width:200px;
+height:300px;
+background:url(../bilder/nbgd.png);  
+}
+.nbg:hover {
+background:url(../bilder/nbg.png);  
+}  
+.digi { 
+width:200px;
+height:300px;
+background:url(../bilder/digid.png);  
+}
+.digi:hover {
+background:url(../bilder/digi.png);  
+}  
+
+.nrpg {     
+width:200px;
+height:300px;
+background:url(../bilder/nrpgd.png);  
+}
+.nrpg:hover {
+background:url(../bilder/nrpg.png);  
+}     
+
+.bleach {      
+width:200px;
+height:300px;
+background:url(../bilder/bleachd.png);  
+}
+.bleach:hover {
+background:url(../bilder/bleach.png);  
+}     

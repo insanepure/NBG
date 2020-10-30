@@ -1,0 +1,95 @@
+body { background:url(../bilder/design/sakura/bg.png) repeat-x; background-color:#a95d68;}
+.arrowlof a{   
+background:url(../bilder/design/sakura/arrowlof.png);     
+}    
+.arrowlof a:hover{   
+background:url(../bilder/design/sakura/arrowlh.png); 
+}
+.arrowlon a{  
+background:url(../bilder/design/sakura/arrowlon.png);  
+} 
+.arrowrof a{  
+background:url(../bilder/design/sakura/arrowrof.png);     
+}    
+.arrowrof a:hover{   
+background:url(../bilder/design/sakura/arrowrh.png); 
+}
+.arrowron a{  
+background:url(../bilder/design/sakura/arrowron.png);      
+}  
+.button {
+background: url(../bilder/design/sakura/up.png) no-repeat top left;
+}   
+.button:active {
+background: url(../bilder/design/sakura/down.png) no-repeat top left;
+}
+.button2 {
+background: url(../bilder/design/sakura/up2.png) no-repeat top left;
+}   
+.button2:active {
+background: url(../bilder/design/sakura/down2.png) no-repeat top left;
+}
+.button3 {
+background: url(../bilder/design/sakura/up3.png) no-repeat top left;
+}   
+.button3:active {
+background: url(../bilder/design/sakura/down3.png) no-repeat top left;
+}
+.textfield2
+{
+background: url(../bilder/design/sakura/textfield.png) no-repeat;
+}
+.eingabe1
+{
+background: url(../bilder/design/sakura/eingabe.png) no-repeat;
+}
+.eingabe3
+{
+background: url(../bilder/design/sakura/eingabe2.png) no-repeat;
+}
+.eingabe5
+{
+background: url(../bilder/design/sakura/eingabe3.png) no-repeat;
+}
+.ltc{
+background:url(../bilder/design/sakura/lefttopc.png);
+}
+.lt{
+background:url(../bilder/design/sakura/lefttop.png);
+}
+.lm{
+background:url(../bilder/design/sakura/leftmit.png);
+}
+.lb{
+background:url(../bilder/design/sakura/leftbot.png);
+}
+.rth{
+background:url(../bilder/design/sakura/rechtstoph.png);
+}
+.rt{
+background:url(../bilder/design/sakura/rechtstop.png);
+}
+.rm{
+background:url(../bilder/design/sakura/rechtsmit.png);
+}
+.rb{
+background:url(../bilder/design/sakura/rechtsbot.png);
+}
+.olb{
+background:url(../bilder/design/sakura/topl.png);
+}
+.omb{
+background:url(../bilder/design/sakura/topm.png);
+}
+.orb{
+background:url(../bilder/design/sakura/topr.png);
+}
+A:link {color: #000090; }
+A:visited {color: #000090; }
+A:active {color: #0000ff; }
+A:hover {color: #0000ff; text-shadow: 0px 0px 5px #fff;}
+A.blink{color: #f00000;}
+.footer{color:#000;}
+.auswahl{color: #fff;  background: url(../bilder/design/auswahlp.png) no-repeat right #bf7a82;}
+.auswahl2{color: #fff;  background: url(../bilder/design/auswahlp.png) no-repeat right #bf7a82;}
+.statsadd{color:#33bb33;}

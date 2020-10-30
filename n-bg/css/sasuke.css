@@ -1,0 +1,95 @@
+body { background:url(../bilder/design/sasuke/bg.png) repeat-x; background-color:#a6a1b4;}
+.arrowlof a{   
+background:url(../bilder/design/sasuke/arrowlof.png);     
+}    
+.arrowlof a:hover{   
+background:url(../bilder/design/sasuke/arrowlh.png); 
+}
+.arrowlon a{  
+background:url(../bilder/design/sasuke/arrowlon.png);  
+} 
+.arrowrof a{  
+background:url(../bilder/design/sasuke/arrowrof.png);     
+}    
+.arrowrof a:hover{   
+background:url(../bilder/design/sasuke/arrowrh.png); 
+}
+.arrowron a{  
+background:url(../bilder/design/sasuke/arrowron.png);      
+}  
+.button {
+background: url(../bilder/design/sasuke/up.png) no-repeat top left;
+}   
+.button:active {
+background: url(../bilder/design/sasuke/down.png) no-repeat top left;
+}
+.button2 {
+background: url(../bilder/design/sasuke/up2.png) no-repeat top left;
+}   
+.button2:active {
+background: url(../bilder/design/sasuke/down2.png) no-repeat top left;
+}
+.button3 {
+background: url(../bilder/design/sasuke/up3.png) no-repeat top left;
+}   
+.button3:active {
+background: url(../bilder/design/sasuke/down3.png) no-repeat top left;
+}
+.textfield2
+{
+background: url(../bilder/design/sasuke/textfield.png) no-repeat;
+}
+.eingabe1
+{
+background: url(../bilder/design/sasuke/eingabe.png) no-repeat;
+}
+.eingabe3
+{
+background: url(../bilder/design/sasuke/eingabe2.png) no-repeat;
+}
+.eingabe5
+{
+background: url(../bilder/design/sasuke/eingabe3.png) no-repeat;
+}
+.ltc{
+background:url(../bilder/design/sasuke/lefttopc.png);
+}
+.lt{
+background:url(../bilder/design/sasuke/lefttop.png);
+}
+.lm{
+background:url(../bilder/design/sasuke/leftmit.png);
+}
+.lb{
+background:url(../bilder/design/sasuke/leftbot.png);
+}
+.rth{
+background:url(../bilder/design/sasuke/rechtstoph.png);
+}
+.rt{
+background:url(../bilder/design/sasuke/rechtstop.png);
+}
+.rm{
+background:url(../bilder/design/sasuke/rechtsmit.png);
+}
+.rb{
+background:url(../bilder/design/sasuke/rechtsbot.png);
+}
+.olb{
+background:url(../bilder/design/sasuke/topl.png);
+}
+.omb{
+background:url(../bilder/design/sasuke/topm.png);
+}
+.orb{
+background:url(../bilder/design/sasuke/topr.png);
+}
+A:link {color: #fff; }
+A:visited {color: #fff; }
+A:active {color: #fff; }
+A:hover {color: #000; text-shadow: 0px 0px 5px #fff;}   
+A.blink{color: #f00000;}
+.footer{color:#fff;}
+.auswahl{color: #fff;  background: url(../bilder/design/auswahlp.png) no-repeat right #81819f;}
+.auswahl2{color: #fff;  background: url(../bilder/design/auswahlp.png) no-repeat right #81819f;}
+.statsadd{color:#33cc33;}

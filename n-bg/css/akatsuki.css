@@ -1,0 +1,95 @@
+body { background:url(../bilder/design/akatsuki/bg.png) repeat-x; background-color:#0d0f0f;}
+.arrowlof a{   
+background:url(../bilder/design/akatsuki/arrowlof.png);     
+}    
+.arrowlof a:hover{   
+background:url(../bilder/design/akatsuki/arrowlh.png); 
+}
+.arrowlon a{  
+background:url(../bilder/design/akatsuki/arrowlon.png);  
+} 
+.arrowrof a{  
+background:url(../bilder/design/akatsuki/arrowrof.png);     
+}    
+.arrowrof a:hover{   
+background:url(../bilder/design/akatsuki/arrowrh.png); 
+}
+.arrowron a{  
+background:url(../bilder/design/akatsuki/arrowron.png);      
+}  
+.button {
+background: url(../bilder/design/akatsuki/up.png) no-repeat top left;
+}   
+.button:active {
+background: url(../bilder/design/akatsuki/down.png) no-repeat top left;
+}
+.button2 {
+background: url(../bilder/design/akatsuki/up2.png) no-repeat top left;
+}   
+.button2:active {
+background: url(../bilder/design/akatsuki/down2.png) no-repeat top left;
+}
+.button3 {
+background: url(../bilder/design/akatsuki/up3.png) no-repeat top left;
+}   
+.button3:active {
+background: url(../bilder/design/akatsuki/down3.png) no-repeat top left;
+}
+.textfield2
+{
+background: url(../bilder/design/akatsuki/textfield.png) no-repeat;
+}
+.eingabe1
+{
+background: url(../bilder/design/akatsuki/eingabe.png) no-repeat;
+}
+.eingabe3
+{
+background: url(../bilder/design/akatsuki/eingabe2.png) no-repeat;
+}
+.eingabe5
+{
+background: url(../bilder/design/akatsuki/eingabe3.png) no-repeat;
+}
+.ltc{
+background:url(../bilder/design/akatsuki/lefttopc.png);
+}
+.lt{
+background:url(../bilder/design/akatsuki/lefttop.png);
+}
+.lm{
+background:url(../bilder/design/akatsuki/leftmit.png);
+}
+.lb{
+background:url(../bilder/design/akatsuki/leftbot.png);
+}
+.rth{
+background:url(../bilder/design/akatsuki/rechtstoph.png);
+}
+.rt{
+background:url(../bilder/design/akatsuki/rechtstop.png);
+}
+.rm{
+background:url(../bilder/design/akatsuki/rechtsmit.png);
+}
+.rb{
+background:url(../bilder/design/akatsuki/rechtsbot.png);
+}
+.olb{
+background:url(../bilder/design/akatsuki/topl.png);
+}
+.omb{
+background:url(../bilder/design/akatsuki/topm.png);
+}
+.orb{
+background:url(../bilder/design/akatsuki/topr.png);
+}
+A:link {color: #fff; }
+A:visited {color: #fff; }
+A:active {color: #fff; }
+A:hover {color: #000; text-shadow: 0px 0px 5px #fff;}   
+A.blink{color: #00f000;}
+.footer{color:#fff;}
+.auswahl{color: #fff;  background: url(../bilder/design/auswahlp.png) no-repeat right #8e2f38;}
+.auswahl2{color: #fff;  background: url(../bilder/design/auswahlp.png) no-repeat right #8e2f38;}
+.statsadd{color:#33cc33;}

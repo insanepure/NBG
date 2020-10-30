@@ -1,0 +1,95 @@
+body { background:url(../bilder/design/gaara/bg.png) repeat-x; background-color:#d1c3b4;}
+.arrowlof a{   
+background:url(../bilder/design/gaara/arrowlof.png);     
+}    
+.arrowlof a:hover{   
+background:url(../bilder/design/gaara/arrowlh.png); 
+}
+.arrowlon a{  
+background:url(../bilder/design/gaara/arrowlon.png);  
+} 
+.arrowrof a{  
+background:url(../bilder/design/gaara/arrowrof.png);     
+}    
+.arrowrof a:hover{   
+background:url(../bilder/design/gaara/arrowrh.png); 
+}
+.arrowron a{  
+background:url(../bilder/design/gaara/arrowron.png);      
+}  
+.button {
+background: url(../bilder/design/gaara/up.png) no-repeat top left;
+}   
+.button:active {
+background: url(../bilder/design/gaara/down.png) no-repeat top left;
+}
+.button2 {
+background: url(../bilder/design/gaara/up2.png) no-repeat top left;
+}   
+.button2:active {
+background: url(../bilder/design/gaara/down2.png) no-repeat top left;
+}
+.button3 {
+background: url(../bilder/design/gaara/up3.png) no-repeat top left;
+}   
+.button3:active {
+background: url(../bilder/design/gaara/down3.png) no-repeat top left;
+}
+.textfield2
+{
+background: url(../bilder/design/gaara/textfield.png) no-repeat;
+}
+.eingabe1
+{
+background: url(../bilder/design/gaara/eingabe.png) no-repeat;
+}
+.eingabe3
+{
+background: url(../bilder/design/gaara/eingabe2.png) no-repeat;
+}
+.eingabe5
+{
+background: url(../bilder/design/gaara/eingabe3.png) no-repeat;
+}
+.ltc{
+background:url(../bilder/design/gaara/lefttopc.png);
+}
+.lt{
+background:url(../bilder/design/gaara/lefttop.png);
+}
+.lm{
+background:url(../bilder/design/gaara/leftmit.png);
+}
+.lb{
+background:url(../bilder/design/gaara/leftbot.png);
+}
+.rth{
+background:url(../bilder/design/gaara/rechtstoph.png);
+}
+.rt{
+background:url(../bilder/design/gaara/rechtstop.png);
+}
+.rm{
+background:url(../bilder/design/gaara/rechtsmit.png);
+}
+.rb{
+background:url(../bilder/design/gaara/rechtsbot.png);
+}
+.olb{
+background:url(../bilder/design/gaara/topl.png);
+}
+.omb{
+background:url(../bilder/design/gaara/topm.png);
+}
+.orb{
+background:url(../bilder/design/gaara/topr.png);
+}
+A:link {color: #fff; }
+A:visited {color: #fff; }
+A:active {color: #fff; }
+A:hover {color: #000; text-shadow: 0px 0px 5px #fff;}   
+A.blink{color: #f00000;}
+.footer{color:#fff;}
+.auswahl{color: #fff;  background: url(../bilder/design/auswahlp.png) no-repeat right #bba288;}
+.auswahl2{color: #fff;  background: url(../bilder/design/auswahlp.png) no-repeat right #bba288;}
+.statsadd{color:#33cc33;}

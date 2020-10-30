@@ -1,0 +1,95 @@
+body { background:url(../bilder/design/aburame/bg.png) repeat-x; background-color:#080908;}
+.arrowlof a{   
+background:url(../bilder/design/aburame/arrowlof.png);     
+}    
+.arrowlof a:hover{   
+background:url(../bilder/design/aburame/arrowlh.png); 
+}
+.arrowlon a{  
+background:url(../bilder/design/aburame/arrowlon.png);  
+} 
+.arrowrof a{  
+background:url(../bilder/design/aburame/arrowrof.png);     
+}    
+.arrowrof a:hover{   
+background:url(../bilder/design/aburame/arrowrh.png); 
+}
+.arrowron a{  
+background:url(../bilder/design/aburame/arrowron.png);      
+}  
+.button {
+background: url(../bilder/design/aburame/up.png) no-repeat top left;
+}   
+.button:active {
+background: url(../bilder/design/aburame/down.png) no-repeat top left;
+}
+.button2 {
+background: url(../bilder/design/aburame/up2.png) no-repeat top left;
+}   
+.button2:active {
+background: url(../bilder/design/aburame/down2.png) no-repeat top left;
+}
+.button3 {
+background: url(../bilder/design/aburame/up3.png) no-repeat top left;
+}   
+.button3:active {
+background: url(../bilder/design/aburame/down3.png) no-repeat top left;
+}
+.textfield2
+{
+background: url(../bilder/design/aburame/textfield.png) no-repeat;
+}
+.eingabe1
+{
+background: url(../bilder/design/aburame/eingabe.png) no-repeat;
+}
+.eingabe3
+{
+background: url(../bilder/design/aburame/eingabe2.png) no-repeat;
+}
+.eingabe5
+{
+background: url(../bilder/design/aburame/eingabe3.png) no-repeat;
+}
+.ltc{
+background:url(../bilder/design/aburame/lefttopc.png);
+}
+.lt{
+background:url(../bilder/design/aburame/lefttop.png);
+}
+.lm{
+background:url(../bilder/design/aburame/leftmit.png);
+}
+.lb{
+background:url(../bilder/design/aburame/leftbot.png);
+}
+.rth{
+background:url(../bilder/design/aburame/rechtstoph.png);
+}
+.rt{
+background:url(../bilder/design/aburame/rechtstop.png);
+}
+.rm{
+background:url(../bilder/design/aburame/rechtsmit.png);
+}
+.rb{
+background:url(../bilder/design/aburame/rechtsbot.png);
+}
+.olb{
+background:url(../bilder/design/aburame/topl.png);
+}
+.omb{
+background:url(../bilder/design/aburame/topm.png);
+}
+.orb{
+background:url(../bilder/design/aburame/topr.png);
+}
+A:link {color: #000090; }
+A:visited {color: #000090; }
+A:active {color: #0000ff; }
+A:hover {color: #0000ff; text-shadow: 0px 0px 5px #fff;}
+A.blink{color: #f00000;}
+.footer{color:#000;}
+.auswahl{color: #000090;  background: url(../bilder/design/auswahlp.png) no-repeat right #7d877a;}
+.auswahl2{color: #000090;  background: url(../bilder/design/auswahlp.png) no-repeat right #7d877a;}
+.statsadd{color:#33cc33;}

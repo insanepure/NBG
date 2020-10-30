@@ -1,0 +1,383 @@
+.mokuton a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/mokutond.png);
+}
+.mokuton a:hover {
+background-image:url(../bilder/reg/mokuton.png);
+}
+.yamanaka a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/yamanakad.png);
+}
+.yamanaka a:hover {
+background-image:url(../bilder/reg/yamanaka.png);
+}   
+.senninkac a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/senninkad.png);
+}
+.senninkac a:hover {
+background-image:url(../bilder/reg/senninka.png);
+}   
+.hozuki a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/hozukid.png);
+}
+.hozuki a:hover {
+background-image:url(../bilder/reg/hozuki.png);
+}   
+.kamizuru a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/kamizurud.png);
+}
+.kamizuru a:hover {
+background-image:url(../bilder/reg/kamizuru.png);
+}   
+.sakon a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/sakond.png);
+}
+.sakon a:hover {
+background-image:url(../bilder/reg/sakon.png);
+}    
+.kurama a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/kuramad.png);
+}
+.kurama a:hover {
+background-image:url(../bilder/reg/kurama.png);
+}
+.akimichi a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/akimichid.png);
+}
+.akimichi a:hover {
+background-image:url(../bilder/reg/akimichi.png);
+}
+.yuki a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/yukid.png);
+}
+.yuki a:hover {
+background-image:url(../bilder/reg/yuki.png);
+}
+.jiton a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/jitond.png);
+}
+.jiton a:hover {
+background-image:url(../bilder/reg/jiton.png);
+}
+.sand a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/sandd.png);
+}
+.sand a:hover {
+background-image:url(../bilder/reg/sand.png);
+}
+.shouton a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/shoutond.png);
+}
+.shouton a:hover {
+background-image:url(../bilder/reg/shouton.png);
+}
+.kugutsu a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/kugutsud.png);
+}
+.kugutsu a:hover {
+background-image:url(../bilder/reg/kugutsu.png);
+}
+.kaguya a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/kaguyad.png);
+}
+.kaguya a:hover {
+background-image:url(../bilder/reg/kaguya.png);
+}
+.youton a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/youtond.png);
+}
+.youton a:hover {
+background-image:url(../bilder/reg/youton.png);
+}
+.normal a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/normald.png);
+}
+.normal a:hover {
+background-image:url(../bilder/reg/normal.png);
+}
+.hyuuga a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/hyuugad.png);
+}
+.hyuuga a:hover {
+background-image:url(../bilder/reg/hyuuga.png);
+}
+.tai a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/taid.png);
+}
+.tai a:hover {
+background-image:url(../bilder/reg/tai.png);
+}
+.kumos a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/kumod.png);
+}
+.kumos a:hover {
+background-image:url(../bilder/reg/kumos.png);
+}
+.uchiha a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/uchihad.png);
+}
+.uchiha a:hover {
+background-image:url(../bilder/reg/uchiha.png);
+}                                 
+.aburame a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/aburamed.png);
+}
+.aburame a:hover {
+background-image:url(../bilder/reg/aburame.png);
+}
+.inuzuka a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/inuzukad.png);
+}
+.inuzuka a:hover {
+background-image:url(../bilder/reg/inuzuka.png);
+}
+.nara a {
+z-index:0;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/narad.png);
+}
+.nara a:hover {
+background-image:url(../bilder/reg/nara.png);
+}
+.girl a {
+z-index:0;
+position:absolute;
+left:100px;
+top:0px;
+height: 250px;
+width: 150px;
+display:block;
+background-image:url(../bilder/reg/girlb.png);
+}
+.girl a:hover {
+background-image:url(../bilder/reg/girl.png);
+}
+.boy a {
+z-index:0;
+position:absolute;
+right:100px;
+top:0px;
+height: 250px;
+width: 150px;
+display:block;
+background-image:url(../bilder/reg/boyb.png);
+}
+.boy a:hover {
+background-image:url(../bilder/reg/boy.png);
+}
+.konoha a {
+position:absolute;
+left:20px;
+top:50px;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/konohab.png);
+}
+.konoha a:hover {
+background-image:url(../bilder/reg/konoha.png);
+}
+.kusa a {
+position:absolute;
+left:80px;
+top:200px;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/kusab.png);
+}
+.kusa a:hover {
+background-image:url(../bilder/reg/kusa.png);
+}
+.suna a {
+position:absolute;
+left:170px;
+top:50px;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/sunab.png);
+}
+.suna a:hover {
+background-image:url(../bilder/reg/suna.png);
+}
+.taki a {
+position:absolute;
+left:220px;
+top:200px;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/takib.png);
+}
+.taki a:hover {
+background-image:url(../bilder/reg/taki.png);
+}
+.kiri a {
+position:absolute;
+left:320px;
+top:50px;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/kirib.png);
+}
+.kiri a:hover {
+background-image:url(../bilder/reg/kiri.png);
+}
+.ame a {
+position:absolute;
+left:370px;
+top:200px;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/ameb.png);
+}
+.ame a:hover {
+background-image:url(../bilder/reg/ame.png);
+}
+.iwa a {
+position:absolute;
+left:470px;
+top:50px;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/iwab.png);
+}
+.iwa a:hover {
+background-image:url(../bilder/reg/iwa.png);
+}
+.oto a {
+position:absolute;
+left:520px;
+top:200px;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/otob.png);
+}
+.oto a:hover {
+background-image:url(../bilder/reg/oto.png);
+}
+.kumo a {
+position:absolute;
+left:620px;
+top:50px;
+height: 100px;
+width: 100px;
+display:block;
+background-image:url(../bilder/reg/kumob.png);
+}
+.kumo a:hover {
+background-image:url(../bilder/reg/kumo.png);
+}      
+.werte
+{      
+position:absolute;
+}
+.clanwahl
+{
+width:100%;
+height:400px;
+}
+.dorfwahl
+{
+width:100%;
+height:200px;
+}
+.statswahl
+{    
+height:200px;
+width:100%;
+}
