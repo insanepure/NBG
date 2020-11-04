@@ -346,6 +346,7 @@ $mexp = getwert($uid,"charaktere","mexp","id");
 $ulevel = getwert($uid,"charaktere","level","id"); 
 $ustats = getwert($uid,"charaktere","statspunkte","id"); 
 $nexp = $uexp+$exp;    
+$statsgain = 0;
 
       $con=mysqli_connect($host, $user, $pw) or die(mysqli_error($con));
       mysqli_select_db($con, $datenbank) or die(mysqli_error($con)); 
@@ -358,10 +359,10 @@ $tempint = ceil($tempint);
 $tempint =$tempint*10;
 $mexp = $mexp+$tempint;                        
 $ustats = $ustats+round(10*$ulevel);
+$statsgain = $statsgain + round(10*$ulevel);
 if($ulevel == 70){
 $nexp = 0;
 }     
-  
             
 $uclan = getwert($uid,"charaktere","clan","id"); 
 $urank = getwert($uid,"charaktere","rank","id"); 
@@ -857,6 +858,11 @@ $nexp = 0;
 }
 }
       $sql="UPDATE charaktere SET level ='$ulevel',exp ='$nexp',mexp ='$mexp',statspunkte ='$ustats' WHERE id = '".$uid."' LIMIT 1";
+      if (!mysqli_query($con, $sql))
+      {
+      die('Error: ' . mysqli_error($con));
+      }   
+        $sql="UPDATE summon SET statspunkte = statspunkte+$statsgain WHERE besitzer = '".$uid."'";
       if (!mysqli_query($con, $sql))
       {
       die('Error: ' . mysqli_error($con));

@@ -585,7 +585,7 @@ $error = 'Deine Leiche tut schon etwas.';
 }
 }
 }
-else if($aktion == "specialtrain" && ($uclan == 'inuzuka' || $uclan == 'sakon' || $uclan == 'jiongu' || $uclan == 'admin')){
+/*else if($aktion == "specialtrain" && ($uclan == 'inuzuka' || $uclan == 'sakon' || $uclan == 'jiongu' || $uclan == 'admin')){
 $saktion = getwert($summon,"summon","aktion","id");
 if($saktion == ""){
 $dauer = $_POST['dauer'];
@@ -692,7 +692,7 @@ $error = 'Du hast die Stats zurückgesetzt.';
 else{
 $error = 'Du hast nicht genügend Ryo.';
 }
-}
+}*/
 if($aktion == "heil"){
 $saktion = getwert($summon,"summon","aktion","id");
 if($saktion == ""){
@@ -1498,7 +1498,7 @@ $statspunkte = getwert($summon,"summon","statspunkte","id");
 $maxStats = 80000;
 $ustats = ($umhp/10)+($umchakra/10)+$umkr+$umintl+$umchrk+$umgnk+$umwid+$smtmp + $umstats;
 $sstats = ($smhp/10)+($smchakra/10)+$smkr+$smintl+$smchrk+$smgnk+$smwid+$smtmp + $statspunkte;
-  
+/*
 echo '<tr>';
 echo '<td>';
 echo '<h3>Stats Zurücksetzen</h3>';
@@ -1513,7 +1513,8 @@ echo '</td>';
 echo '<td>';
 echo '<table width="100%">';
 echo '<tr><td align="center">';
-echo '<h3>Spezialtraining</h3>';  
+
+ echo '<h3>Spezialtraining</h3>';  
   
 
 $statsWin = floor(($ustats - $sstats)/10);
@@ -1558,6 +1559,7 @@ echo '</form>';
 echo '</table>';
 echo '</td>';  
 echo '</tr>';
+*/
 }
 echo '</table><br/>';
   

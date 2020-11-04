@@ -236,7 +236,8 @@ mintl,
 mtmp,
 mgnk,
 mchrk,
-mwid
+mwid,
+statspunkte
 FROM
 charaktere   
 WHERE id = "'.$uid.'" LIMIT 1';
@@ -245,9 +246,10 @@ if (!$result) {
 die ('Etwas stimmte mit dem Query nicht: '.$db->error);
 }
 while ($row = $result->fetch_assoc()) { // NULL ist quivalent zu false  
-$ustats = ($row['mhp']/10)+($row['mchakra']/10)+$row['mkr']+$row['mintl']+$row['mgnk']+$row['mchrk']+$row['mtmp']+$row['mwid'];  
+$ustats = ($row['mhp']/10)+($row['mchakra']/10)+$row['mkr']+$row['mintl']+$row['mgnk']+$row['mchrk']+$row['mtmp']+$row['mwid']+$row['statspunkte'];  
 }
 $result->close();$db->close();
+$ustats = $ustats-80;
 $db = @new mysqli($host, $user, $pw, $datenbank);
 if (mysqli_connect_errno()) {
 die ('Konnte keine Verbindung zur Datenbank aufbauen: '.mysqli_connect_error().'('.mysqli_connect_errno().')');
@@ -276,9 +278,6 @@ if (!$result) {
 die ('Etwas stimmte mit dem Query nicht: '.$db->error);
 }
 while ($row = $result->fetch_assoc()) { // NULL ist quivalent zu false 
-$ustats = round($ustats*$row['kaufstats']/100);  
-$istats = ($row['hp']/10)+($row['chakra']/10)+$row['kr']+$row['intl']+$row['gnk']+$row['chrk']+$row['tmp']+$row['wid']; 
-$stats = $ustats+$istats-80; 
 $sql="INSERT INTO summon(
 name,
 hp,     
@@ -314,7 +313,7 @@ VALUES
 '".$row['kbild']."', 
 '".$row['bild']."', 
 '$reihenfolge',   
-'$stats',     
+'$ustats',     
 '$uid',
 '".$row['geschlecht']."')"; 
 if (!mysqli_query($con, $sql))
