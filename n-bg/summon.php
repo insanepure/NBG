@@ -1415,6 +1415,7 @@ echo '<h3>Trainieren</h3>';
 if($uclan == 'kugutsu'){
 echo '<h3>Aufrüstung</h3>';
 }
+echo '<b>Die Stats können nicht über die Stats des Charakters kommen.</b></br>';
 echo '<form method="post" action="summon.php?summon='.$summon.'&aktion=training">';
 echo '<table width="100%">';
 echo '<tr>';

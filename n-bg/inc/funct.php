@@ -1234,7 +1234,35 @@ include 'serverdaten.php';
 $geht = 1;         
 //trainieren
 $trainieren = substr($saktion,-10);
-if($trainieren == "trainieren"||$trainieren == 'verbessern'){           
+if($trainieren == "trainieren"||$trainieren == 'verbessern'){  
+  
+
+$umhp = getwert(session_id(),"charaktere","mhp","session");
+$umchakra = getwert(session_id(),"charaktere","mchakra","session");
+$umkr = getwert(session_id(),"charaktere","mkr","session");
+$umintl = getwert(session_id(),"charaktere","mintl","session");
+$umchrk = getwert(session_id(),"charaktere","mchrk","session");
+$umgnk = getwert(session_id(),"charaktere","mgnk","session");
+$umwid = getwert(session_id(),"charaktere","mwid","session");
+$umtmp = getwert(session_id(),"charaktere","mtmp","session");
+$umstats = getwert(session_id(),"charaktere","statspunkte","session");  
+$ustats = ($umhp/10)+($umchakra/10)+$umkr+$umintl+$umchrk+$umgnk+$umwid+$smtmp + $umstats;
+  
+$smhp = getwert($summon,"summon","mhp","id");
+$smchakra = getwert($summon,"summon","mchakra","id");
+$smkr = getwert($summon,"summon","kr","id");
+$smintl = getwert($summon,"summon","intl","id");
+$smchrk = getwert($summon,"summon","chrk","id");
+$smgnk = getwert($summon,"summon","gnk","id");
+$smwid = getwert($summon,"summon","wid","id");
+$smtmp = getwert($summon,"summon","tmp","id");
+$smstats = getwert($summon,"summon","statspunkte","id");
+$sstats = ($smhp/10)+($smchakra/10)+$smkr+$smintl+$smchrk+$smgnk+$smwid+$smtmp + $smstats;
+
+$maxStatsGain = $ustats - $sstats;
+if($maxStatsGain < 0) 
+  $maxStatsGain = 0;
+  
 $wert = substr($saktion,0,-11); 
 if($wert == "HP"){
 $wert = 'hp';
@@ -1313,21 +1341,34 @@ $maxwert = 10000;
 } 
 if($wert == "hp"||$wert == "chakra"){    
 $uwertm = getwert($summon,"summon","m$wert","id");   
-$nwert = $uwert+(floor($aktiond/60)*10);
+  
+$nstatsGain = (floor($aktiond/60)*10);
+if($nstatsGain > $maxStatsGain) 
+  $nstatsGain = $maxStatsGain;  
+  
+$nwert = $uwert+$nstatsGain;
 if($nwert > $maxwert){
 $nwert = $maxwert;
 }
-$nwertm = $uwertm+(floor($aktiond/60)*10);
+$nwertm = $uwertm+$nstatsGain;
 if($nwertm > $maxwert){
 $nwertm = $maxwert;
 }
 }
 else{
-$nwert = $uwert+floor($aktiond/60);  
+  
+$nstatsGain = floor($aktiond/60);
+if($nstatsGain > $maxStatsGain) 
+  $nstatsGain = $maxStatsGain;  
+  
+$nwert = $uwert+$nstatsGain;  
 if($nwert > $maxwert){
 $nwert = $maxwert;
 }
 }
+  
+  
+  
 $con=mysqli_connect($host, $user, $pw) or die(mysqli_error($con));
 mysqli_select_db($con, $datenbank) or die(mysqli_error($con));
 $sql="UPDATE summon SET $wert ='$nwert' WHERE id = '".$summon."' LIMIT 1";
@@ -1724,9 +1765,17 @@ $zufall = 3;
 }  
 }
 if($uaktion == "Harter Weg"){
-$zufall = 1;      
+$zufall = rand(1,8);      
+if($zufall != 1){
+$zufall = 1;
 $gegner = rand(2,5);  
-}                
+}
+else{   
+$zufall = rand(1,2);
+$zufall = $zufall * 2;
+}   
+}
+  
 if($geht == 1){
 if($zufall == 1){
 //Kampf   

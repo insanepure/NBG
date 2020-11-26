@@ -1194,7 +1194,7 @@ Ihre Anforderungen unterscheiden sich von jedem Kage.<br>
 In den meisten Fällen musst du Level 10 erreicht haben und die 3 Grundjutsus erlernt haben.<br>
 Als Tai-Ninja musst du nur Level 10 erreichen.</td></tr>';
 echo '<tr><td class="tdbg tdborder" colspan="2"><h3>Chunin Prüfung</h3></td></tr>';
-echo '<tr><td>Die Chuninprüfung findet immer am Sonntag statt.<br>
+echo '<tr><td>Die Chuninprüfung findet immer am Mittwoch, Freitag und Sonntag statt.<br>
 Um sie bestehen zu können, musst du eine schriftliche Prüfung bestehen,<br>
 welche aus 10 Fragen besteht und anschließend einem praktischen Teil.<br>
 Dort musst du in einem Turnier alle deine Konkurrenten besiegen.<br>
