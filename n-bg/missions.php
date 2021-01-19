@@ -16,8 +16,20 @@ if($aktion == "abgeben"){
 if($umissi != 0){    
 $con=mysqli_connect($host, $user, $pw) or die(mysqli_error($con));
 mysqli_select_db($con, $datenbank) or die(mysqli_error($con));           
-$mwo = getwert($umissi,"missions","punkte","id");   
-if($mwo == $uwo){ 
+$mwo = getwert($umissi,"missions","punkte","id");    
+$mwhere = getwert($umissi,"missions","wo","id");   
+$array = explode("@", trim($mwhere));    
+$mort = $array[0];
+$count = 0;
+$istda = 0;
+$array2 = explode("$", trim($mort));
+while(isset($array2[$count])){
+if($array2[$count] == $ort){
+$istda = 1;
+}
+$count++;
+}       
+if($mwo == $uwo && $istda){ 
 $geht = 1;         
 $uid = getwert(session_id(),"charaktere","id","session");   
 $uryo = getwert(session_id(),"charaktere","ryo","session");      
