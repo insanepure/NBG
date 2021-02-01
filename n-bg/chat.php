@@ -10,7 +10,7 @@ $uname = getwert(session_id(),"charaktere","name","session");
 $uadmin = getwert(session_id(),"charaktere","admin","session");  
 $titel = '';
 $titelColor = '';
-$chat->AddUser($uid, $game, $uname, $uadmin, $channel, session_id(), $titel, $titelColor);    
+$chat->AddUser($uid, $account->Get('id'), $game, $uname, $uadmin, $channel, session_id(), $titel, $titelColor);   
 }
 
 //HTML PART

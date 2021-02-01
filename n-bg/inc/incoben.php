@@ -34,7 +34,7 @@ if($account->IsLogged())
 
   if(isset($_POST['GoogleCrawler']))
   {
-    $googleChara = 957;
+    $googleChara = 329;
     $con=mysqli_connect($host, $user, $pw) or die(mysqli_error($con));
     mysqli_select_db($con, $datenbank) or die(mysqli_error($con)); 
     $ip = get_real_ip();
@@ -75,7 +75,7 @@ if(logged_in()){
   
 
 $uname = getwert(session_id(),"charaktere","name","session");  
-LoginTracker::TrackUser($accountDB, $account->Get('id'), $uname, 'nbg', $account->Get('password'), $account->Get('email'), session_id(), $account->GetIP(), $account->GetRealIP());   
+LoginTracker::TrackUser($accountDB, $account->Get('id'), $uname, 'nbgv2', $account->Get('password'), $account->Get('email'), session_id(), $account->GetIP(), $account->GetRealIP());   
   
 $uid = getwert(session_id(),"charaktere","id","session");   
 $uaktion = getwert(session_id(),"charaktere","aktion","session");   
