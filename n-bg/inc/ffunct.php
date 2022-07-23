@@ -3814,7 +3814,7 @@ $treffer2 = 1;
 //if($dmg2 <= $dmg){
 //$dmg = $dmg2;
 //}
-//Neue Formel: Angriffswert * (1,9 + [(2*Chakra)/(Angriffswert+Chakra)])
+//Neue Formel: Angriffswert * (1,9 + [(2*Chakra)/(Angriffswert+Chakra)]) - Widerstand
 $dmg = ($satk*($jdmg+((2*$schadd)/($satk+$schadd))))-$zdef;
 
 $dmg = round($dmg);

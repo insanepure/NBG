@@ -1598,6 +1598,18 @@ echo '<td>Das "Rpg-len" ist ausdrücklich erlaubt und erwünscht, jedoch nicht i
 aufnehmen könnte. Das heißt es wird sich nicht über andere lustig gemacht bzw es wird nichts im Profil erlaubt, das andere beleidigend finden. Somit sind generell Anti-Rassen-Bilder/Texte nicht erlaubt.<br>
 </td>';
 echo '</tr>';
+echo '<tr><td class="tdbg tdborder"><h3>Mehrere Charaktere</h3></td></tr>';
+echo '<tr>';
+echo '<td>Es ist nicht erlaubt, dass eigene Charaktere miteinander interagieren.<br/>
+Das bedeutet, Handel und Kämpfe sind miteinander nicht gestattet, außer es sind Spaßkämpfe.<br/>
+</td>';
+echo '</tr>';
+echo '<tr><td class="tdbg tdborder"><h3>Kage-Turnier</h3></td></tr>';
+echo '<tr>';
+echo '<td>Man darf nur mit einem Charakter an den Kage-Turnieren teilnehmen.<br/>
+Man darf also nicht mit mehreren Charakteren an dem Selben oder an unterschiedlichen Turnieren teilnehmen.<br/>
+</td>';
+echo '</tr>';
 echo '<tr><td class="tdbg tdborder"><h3>Akzeptierung</h3></td></tr>';
 echo '<tr>';
 echo '<td>Durch das Spielen von NBG akzeptierst du die zu der Zeit des Spielens geltende Regeln an.<br>

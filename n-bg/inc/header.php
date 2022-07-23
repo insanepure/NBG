@@ -2,17 +2,23 @@
 <html>
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141582905-2"></script>
 <?php
-$user_id_analytics = session_id();
+$analyticsID = 'G-V4FKL7471M';
+?>
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $analyticsID; ?>"></script>
+<?php
+$user_id_analytics = '';
+$accountTag = '';
+$charaTag = '';
 if($account->IsLogged())
 {
-  $user_id_analytics = $account->Get('id').' ('.$account->Get('login').')';
+  $accountTag = $account->Get('id').' ('.$account->Get('login').')';
+  $user_id_analytics = $account->Get('id');
   if(logged_in())
   {
     $uid = getwert(session_id(),"charaktere","id","session");
     $uname = getwert(session_id(),"charaktere","name","session");
-    $user_id_analytics = $user_id_analytics.' - '.$uid.' ('.$uname.')';
+    $charaTag = $uid.' ('.$uname.')';
   }
 }
 ?>
@@ -20,8 +26,12 @@ if($account->IsLogged())
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('set', {'user_id': '<?php echo $user_id_analytics; ?>'}); // Legen Sie die User ID mithilfe des Parameters "user_id" des angemeldeten Nutzers fest.
-  gtag('config', 'UA-141582905-2');
+  gtag('set','user_properties', {
+  sessionid: '<?php echo session_id(); ?>',
+  account: '<?php echo $accountTag; ?>',
+  character: '<?php echo $charaTag; ?>'
+  });
+  gtag('config', '<?php echo $analyticsID; ?>' <?php if($user_id_analytics != '') { ?>,{ 'user_id': '<?php echo $user_id_analytics; ?>' } <?php } ?>);
 </script>  
 <script src="https://www.google.com/recaptcha/api.js?render=6LdMP7kUAAAAABZPx7qz5I5snHzWntPFMT__E-lu"></script>
 <script>

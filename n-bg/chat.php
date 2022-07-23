@@ -3,8 +3,8 @@ include 'inc/incoben.php';
 // Hier kommen Skripts hin die vorm Laden ausgeführt werden
 $chat = new Chat($accountDB, session_id());
 if(logged_in()){      
-$game = 'NBG';
-$channel = $game;
+$game = 'NBGV2';
+$channel = 'NBG';
 $uid = getwert(session_id(),"charaktere","id","session");
 $uname = getwert(session_id(),"charaktere","name","session");   
 $uadmin = getwert(session_id(),"charaktere","admin","session");  

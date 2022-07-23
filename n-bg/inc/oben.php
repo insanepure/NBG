@@ -336,7 +336,7 @@ echo '</td>';
 </div>     
 <div class="oid">
 <?php
-  $count = Chat::GetUserCount($accountDB);
+  $count = Chat::GetUserCount($accountDB, 'NBG');
   echo '('.$count.')';
 ?>
 </div>           

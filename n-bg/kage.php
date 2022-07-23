@@ -252,7 +252,7 @@ die('Error: ' . mysqli_error($con));
 }                 
 $nname = getwert($nuke,"charaktere","name","id");    
 if($nname == ''){
-$nname = 'Geläschter User';
+$nname = 'Gelöschter User';
 }
 $error = 'Du hast die Einladung von '.$nname.' zurückgenommen.';
 mysqli_close($con);
@@ -380,7 +380,7 @@ echo '</tr>';
 while(isset($array[$count])){            
 $nname = getwert($array[$count],"charaktere","name","id");  
 if($nname == ''){
-$nname = 'Geläschter User';
+$nname = 'Gelöschter User';
 }
 echo '<tr><td><a href="user.php?id='.$array[$count].'">'.$nname.'</a></td><td><a href="kage.php?nuke='.$array[$count].'&aktion=winvite">Einladung zurücknehmen</a></td></tr>';
 $count++;
@@ -445,29 +445,6 @@ echo '<input class="button" name="login" id="login" value="absenden" type="submi
 echo '</td>';
 echo '</tr>';
 echo '</table></form><br>';
-echo '<h3>Turnier</h3>';     
-echo 'Info: Das Turnier findet nach der Erstellung am nächsten Tag statt.<br>Es muss mindestens ein User sich am Erstellungstag angemeldet haben, sonst wird es geläscht.<br>';
-echo '<center><form method="post" action="kage.php?aktion=turnier"> <table>';
-echo '<tr>';
-echo '<td>Name</td><td>';
-echo '<div class="eingabe1">';
-echo '<input class="eingabe2" name="turniername" value="" size="15" maxlength="30" type="text">';   
-echo '</div>';
-echo '</td>';  
-echo '</tr>';    
-echo '<tr>';
-echo '<td>Preisgeld</td><td>';
-echo '<div class="eingabe1">';
-echo '<input class="eingabe2" name="turnierpreis" value="" size="15" maxlength="30" type="text">';   
-echo '</div>';
-echo '</td>';
-echo '</tr>';
-echo '<tr align=center>';
-echo '<td colspan="2" rowspan="1">';
-echo '<input class="button" name="login" id="login" value="erstellen" type="submit">';
-echo '</td>';
-echo '</tr>';
-echo '</table></form></center><br>';
 }                                           
 
 }

@@ -1,50 +1,55 @@
 <?php   
 //Import the PHPMailer class into the global namespace
 use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
 function SendMail($email, $topic, $message)
 {
-  $sender   = "noreply@n-bg.de";
+  $sender   = "info@animebg.de";
 
   $content = file_get_contents('mail.php');
   $content = str_replace("{0}", $topic, $content);
   $content = str_replace("{1}", $message, $content);
 
+  $content = utf8_decode($content);
+  // Instantiation and passing `true` enables exceptions
+  $mail = new PHPMailer(true);
   
-// Instantiation and passing `true` enables exceptions
-$mail = new PHPMailer(true);
-//Create a new PHPMailer instance
-$mail = new PHPMailer;
-//Set who the message is to be sent from
-$mail->setFrom($sender, 'NBG - das Naruto Browsergame');
-//Set an alternative reply-to address
-$mail->addReplyTo($sender, 'NBG - das Naruto Browsergame');
-//Set who the message is to be sent to
-$mail->addAddress($email, 'User');
-//Set the subject line
-$mail->Subject = $topic;
-//Read an HTML message body from an external file, convert referenced images to embedded,
-//convert HTML into a basic plain-text alternative body
-$mail->msgHTML($content);
-//Replace the plain text body with one created manually
-$mail->AltBody = $message;
-
-if($mail->send())
-{
-  return true;
-}
-else
-{
-  echo $mail->ErrorInfo;
-  return false;
-}
-  
-//send the message, check for errors
-//if (!$mail->send()) {
-//    echo 'Mailer Error: '. $mail->ErrorInfo;
-//} else {
-//    echo 'Message sent!';
-//}
+  try {
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = 'HOST';                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Username   = 'info@animebg.de';                     //SMTP username
+    $mail->Password   = 'PW';                               //SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+    $mail->Port       = 465;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+    $mail->addCustomHeader("List-Unsubscribe",'<info@animebg.de>, <https://animebg.de/unsubscribe.php?email='.$email.'>');
+    
+    
+    
+    //Set who the message is to be sent from
+    $mail->setFrom($sender, 'AnimeBG');
+    //Set an alternative reply-to address
+    $mail->addReplyTo($sender, 'AnimeBG');
+    //Set who the message is to be sent to
+    $mail->addAddress($email, 'User');
+    //Set the subject line
+    $mail->Subject = $topic;
+    //Read an HTML message body from an external file, convert referenced images to embedded,
+    //convert HTML into a basic plain-text alternative body
+    $mail->msgHTML($content);
+    //Replace the plain text body with one created manually
+    $mail->AltBody = $message;
+    
+    $mail->send();
+    return true;
+  } 
+  catch (Exception $e) 
+  {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    return false;
+  }
   
 }
 

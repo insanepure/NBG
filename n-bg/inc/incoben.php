@@ -1,6 +1,7 @@
 <?php 
 include_once $_SERVER['DOCUMENT_ROOT'].'../../../main/www/classes/session.php';
-error_reporting(E_ALL & ~E_DEPRECATED);
+ini_set("log_errors", 0);
+error_reporting(E_ALL ^ E_DEPRECATED);
 
 $userRegisterActive = true;
 $userLoginActive = true;
@@ -20,7 +21,7 @@ include_once 'inc/sessionhelpers.php';
 $update = getwert(1,"game","onoff","id");  
 
 $logged = $account->IsLogged();
-if($logged && $account->IsValid() && $account->IsBanned())
+if($logged && $account->IsValid() && $account->IsBannedInGame('NBG'))
 {
   $error = 'Du wurdest aus folgendem Grund vom Spiel gebannt: '.$account->GetBanReason().'.';
   $account->Logout();

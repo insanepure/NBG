@@ -4,10 +4,10 @@ if(!$account->IsLogged() && $userLoginActive)
 { 
   if($_GET['aktion'] == 'login')
   {
-    if($account->Login($_POST['acc'], $_POST['pw'], $_POST['logged']))
+    if($account->LoginSafe($_POST['acc'], $safedPW, $_POST['logged']))
     {               
       $logged = true;
-      if($account->IsValid() && $account->IsBanned())
+      if($account->IsValid() && $account->IsBannedInGame('NBG'))
       {
         $error = 'Du wurdest aus folgendem Grund vom Spiel gebannt: '.$account->GetBanReason().'.';
         $account->Logout();
@@ -77,20 +77,15 @@ include 'inc/serverdaten.php';
 }
 else if($_REQUEST['aktion'] == 'changepw')
 {          
-$pw1 = real_escape_string($_POST['pw1']);       
-$pw2 = real_escape_string($_POST['pw2']);
-if($pw1 == '')
-{
-  $error = 'Das Passwort ist ungültig.<br/>';
-}
-else if($pw1 == $pw2)
-{
-  $account->ChangePassword($pw1);
-  $error = 'Du hast dein Passwort geändert.<br/>';
-}
-else{
-$error = "Die Passwörter stimmen nicht überein.<br>";
-}
+  if($safedPW == $safedPW2)
+  {
+    $account->ChangePasswordSafe($safedPW);
+    $error = 'Du hast dein Passwort geändert.';
+  }
+  else
+  {
+    $error = "Die Passwörter stimmen nicht überein.";
+  }
 }
 else if($_GET['aktion'] == 'charalogin'){
 $id = $_GET['id'];
@@ -134,7 +129,7 @@ if($account->IsLogged()){
 $count = 0;
 $con = mysqli_connect($host,$user,$pw);
 mysqli_select_db($con, $datenbank);     
-$sql = 'SELECT id,name,level,kbild,platz,aktion,aktions,aktiond FROM charaktere WHERE main="'.$account->Get('id').'"';
+$sql = 'SELECT id,name,level,kbild,platz,aktion,aktions,aktiond,rank, dorf, clan FROM charaktere WHERE main="'.$account->Get('id').'"';
 $result = mysqli_query($con, $sql) or die(mysqli_error($con));  
 while ($row = mysqli_fetch_assoc($result))
 { 
@@ -155,7 +150,66 @@ $count = 0;
 <td><img src="<?php if($row['kbild'] == '') echo '/bilder/design/nokpic.png'; else echo $row['kbild']; ?>" width="50px" height="50px"></img></td>
 <td>
 Platz: <?php echo $row['platz']; ?><br>
-Level: <?php echo $row['level']; ?>
+Level: <?php echo $row['level']; ?><br>
+Rank: 
+<?php 
+if($row['rank'] == 'kage'){  
+$tdorf = getwert($row['dorf'],"orte","name","id"); 
+if($tdorf == 'konoha'){
+$rank = 'Hokage';
+}
+elseif($tdorf == 'kiri'){
+$rank = 'Mizukage';
+}  
+elseif($tdorf == 'suna'){
+$rank = 'Kazekage';
+}                
+elseif($tdorf == 'iwa'){
+$rank = 'Tsuchikage';
+}                  
+elseif($tdorf == 'kumo'){
+$rank = 'Raikage';
+}               
+elseif($tdorf == 'oto'){
+$rank = 'Nekage';
+}              
+elseif($tdorf == 'ame'){
+$rank = 'Ukage';
+}             
+elseif($tdorf == 'kusa'){
+$rank = 'Sokage';
+}              
+elseif($tdorf == 'taki'){
+$rank = 'Takikage';
+}                
+else{
+$rank = 'Kage';
+}
+echo $rank;
+}
+elseif($row['rank'] == 'nuke-nin'){      
+if($row['level'] >= 60){
+$rank = 'S-Rang Nuke-Nin';
+}
+if($row['level'] >= 50&&$row['level'] < 60){
+$rank = 'A-Rang Nuke-Nin';
+}
+if($row['level'] >= 30&&$row['level'] < 50){
+$rank = 'B-Rang Nuke-Nin';
+}
+if($row['level'] >= 10&&$row['level'] < 30){
+$rank = 'C-Rang Nuke-Nin';
+}
+if($row['level'] < 10){
+$rank = 'D-Rang Nuke-Nin';
+}       
+echo $rank; 
+} 
+else{
+echo ucwords($row['rank']);
+}
+?><br>
+Clan: <?php echo ucwords($row['clan']); ?><br>
 </td>
 </tr>
 <tr>
@@ -212,7 +266,7 @@ mysqli_close($con);
 <td>Passwort</td>
 <td>
 <div class="eingabe1">
-<input class="eingabe2" name="pw1" id="userpass1" value="" size="15" maxlength="30" type="password">
+<input class="eingabe2" name="pw" id="userpass1" value="" size="15" maxlength="30" type="password">
 </div>
 </td>
 </tr>

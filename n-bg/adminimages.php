@@ -41,7 +41,7 @@ else if(isset($_GET['a']) && $_GET['a'] == 'upload' && isset($_GET['directory'])
     {
       $path = 'bilder/'.$_GET['directory'].'/';
       $imgHandler = new ImageHandler($path);
-      $result = $imgHandler->Upload($_FILES['file_upload'], $image, 2000, 2000, false);
+      $result = $imgHandler->Upload($_FILES['file_upload'], $image, 2000, 2000,2097152, false);
       $imagename = $_FILES['file_upload']['name'];
       
       $message = 'Bild <b>'.$imagename.'</b> wurde in <b>'.$path.'</b> erfolgreich hochgeladen.';

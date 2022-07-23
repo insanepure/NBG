@@ -6,24 +6,21 @@ if($aktion == 'change')
   if(isset($_GET['id']) && isset($_GET['code']))
   {
 		$id = $accountDB->EscapeString($_GET['id']);
-		$result = $accountDB->Select('*','users','id = "'.$id.'"',1);
+		$result = $accountDB->Select('*','users','id = '.$id.'',1);
 		if ($result) 
 		{
       $row = $result->fetch_assoc();
       if($row['password'] == $_GET['code'])
       {
-        $pw1 = $_POST['pw1'];
-        $pw2 = $_POST['pw2'];
-        if($pw1 == $pw2)
+        if($safedPW == $safedPW2)
         {
-		      $pw = $accountDB->EscapeString($pw1);
-          $pw = Account::GetPassword($pw1);
-		      $accountDB->Update('password="'.$pw.'"','users','id = "'.$id.'"',1);
-          $error = 'Das Passwort wurde geändert.';
+		      $safedPW = $accountDB->EscapeString($safedPW);
+		      $accountDB->Update('password="'.$safedPW.'"','users','id = '.$id.'',1);
+          $message = 'Das Passwort wurde geändert.';
         }
         else
         {
-          $error = 'Die Passwörter stimmen nicht überein!';
+          $message = 'Die Passwörter stimmen nicht überein!';
         }
       }
 			$result->close();
@@ -92,7 +89,7 @@ if($valid)
   Du musst nun dein neues Passwort im oberen Feld eingeben und im unteren Feld wiederholen.<br/><br/>
   <form method="post" action="pwforgot.php?aktion=change&id=<?php echo $_GET['id']; ?>&code=<?php echo $_GET['code']; ?>">
 <div class="eingabe1">
-    <input class="eingabe2" type="password" name="pw1" placeholder="Passwort">
+    <input class="eingabe2" type="password" name="pw" placeholder="Passwort">
     </div>
     <br/>
 <div class="eingabe1">

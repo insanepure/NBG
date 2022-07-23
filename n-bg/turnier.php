@@ -55,6 +55,8 @@ $fgegner = $row['id'];
 } 
 }
 $result->close(); $db->close();
+
+  
 if($aktion == "kick"){ 
 $con=mysqli_connect($host, $user, $pw) or die(mysqli_error($con));
 mysqli_select_db($con, $datenbank) or die(mysqli_error($con));   
@@ -494,9 +496,14 @@ if($uhp > 0){
 $two = getwert($tid,"turnier","ort","id");      
 $tenter = getwert($tid,"turnier","enter","id");     
 $teilnehmer = getwert($tid,"turnier","teilnehmer","id");     
+$joineverywhere = getwert($tid,"turnier","joineverywhere","id");     
 if($tenter == 1){
-if($two == $uort){       
+if($joineverywhere || $two == $uort){       
+$tPassword = getwert($tid,"turnier","password","id");     
 $tzeit = getwert($tid,"turnier","start","id");    
+$password = $_POST['password'];
+if($tPassword == '' || $password == $tPassword)
+{
 $tzeit = strtotime($tzeit);
 if($tzeit >= time()){    
 $db = @new mysqli($host, $user, $pw, $datenbank);
@@ -572,7 +579,11 @@ $error = 'Turnier beigetreten.';
 $turnier = $tid; 
 }
 else{
-echo 'Das Turnier hat schon begonnen.';
+$error = 'Das Turnier hat schon begonnen.';
+}
+}
+else{
+$error = 'Das Passwort ist falsch.';
 }
 }
 }
@@ -585,6 +596,76 @@ else{
 $error = 'Du bist schon in einem Turnier.';
 }
 }
+
+  if($aktion == 'turnier'){
+$tgeld = $_POST['turnierpreis'];      
+$tname = real_escape_string($_POST['turniername']);
+$password = real_escape_string($_POST['password']);
+$isEverywhere = 0;
+if(isset($_POST['everywhere']))
+  $isEverywhere = 1;
+    
+$geht = 1;
+$check = namencheck2($tname);
+if($check){
+$geht = 0;
+$error = $error."Der Name enthält unzulässige Wörter ($check).<br>";
+}
+if($tname == ""){
+$geht = 0;
+$error = $error."Du hast keinen Namen angegegeben.<br>";
+}  
+if(!is_numeric($tgeld)||$tgeld == ''||$tgeld < 0){
+$geht = 0;
+$error = $error.'Du hast kein gültiges Preisgeld angegeben.';
+}           
+$uryo = getwert(session_id(),"charaktere","ryo","session");   
+if($uryo < $tgeld){
+$geht = 0;
+$error = $error.'Du hast nicht genügend Ryo.';
+}
+if($geht == 1){  
+$start = time()+(60*60*24);     
+$start = date("Y-m-d H:i:s",$start);
+$con=mysqli_connect($host, $user, $pw) or die(mysqli_error($con));
+mysqli_select_db($con, $datenbank) or die(mysqli_error($con));  
+$sql="INSERT INTO turnier(
+`name`,
+start,   
+rank,
+item,
+itema, 
+ort,     
+ryo,
+password,
+joineverywhere,
+enter)
+VALUES
+('$tname',
+'$start',
+'',
+'',
+'',    
+'$uort', 
+'$tgeld',
+'$password',
+'$isEverywhere',
+'1')"; 
+if (!mysqli_query($con, $sql))
+{
+die('Error: ' . mysqli_error($con));
+}                                                       
+$uid = getwert(session_id(),"charaktere","id","session");  
+$sql="UPDATE charaktere SET ryo =(ryo-".$tgeld.") WHERE id = '".$uid."' LIMIT 1";
+if (!mysqli_query($con, $sql))
+{
+die('Error: ' . mysqli_error($con));
+} 
+mysqli_close($con);
+$error = 'Das Turnier wurde erstellt.';
+}
+
+}  
 
 }
 if(logged_in()){
@@ -700,7 +781,7 @@ echo '<br><a href="turnier.php">Zurück</a>';
 }
 if($page == ''){
 if($turnier == 0||$turnier != 0&&$tzeit >= time()){
-echo '<center><table class="table" cellspacing="0" width="500px">';
+echo '<center><table class="table" cellspacing="0" width="100%">';
 $db = @new mysqli($host, $user, $pw, $datenbank);
 if (mysqli_connect_errno()) {
 die ('Konnte keine Verbindung zur Datenbank aufbauen: '.mysqli_connect_error().'('.mysqli_connect_errno().')');
@@ -716,7 +797,9 @@ item,
 itema,
 enter,
 teilnehmer,
-finale
+finale,
+joineverywhere,
+password
 FROM
 turnier';
 $result = $db->query($sql);
@@ -729,12 +812,15 @@ echo '<td class="tdborder tdbg">Ort</td>';
 echo '<td class="tdborder tdbg">Teilnehmer</td>';
 echo '<td class="tdborder tdbg">Start</td>';
 echo '<td class="tdborder tdbg">Gewinn</td>';    
-echo '<td class="tdborder tdbg"></td>';
+echo '<td class="tdborder tdbg" width="200px"></td>';
 echo '</tr>';
 while ($row = $result->fetch_assoc()) { // NULL ist quivalent zu false
 echo '<tr>';
 echo '<td>'.$row['name'].'</td>';           
-$oname = getwert($row['ort'],"orte","name","id");   
+if($row['joineverywhere'])
+  $oname = 'Überall';
+else
+  $oname = getwert($row['ort'],"orte","name","id");   
 echo '<td>'.ucwords($oname).'</td>';          
 $zeit2 = strtotime($row['start']);
 if($turnier == $row['id']){
@@ -761,11 +847,36 @@ echo 'Item: '.$row['itema'].'x '.$itemn.'<br>';
 }
 echo '</td>';
 echo '<td>';                
-if($uort == $row['ort']){
+if($row['joineverywhere'] || $uort == $row['ort']){
 if($row['id'] != $turnier){
 if($turnier == 0){
 if($row['enter'] != 0&&time() <= $zeit2){
-echo '<a href="turnier.php?aktion=join&tid='.$row['id'].'">Beitreten</a><br>';
+if($row['password'] == '')
+{
+  echo '<a href="turnier.php?aktion=join&tid='.$row['id'].'">Beitreten</a><br>';
+}
+else
+{
+  ?>
+  <form method="POST" action="turnier.php?aktion=join&tid=<?php echo $row['id']; ?>">
+  <table>
+    <tr>
+    <td>
+  <div class="eingabe1">
+    <input class="eingabe2" name="password" value="" size="15" maxlength="30" type="text" placeholder="Passwort">  
+  </div>
+      </td>
+    </tr>
+    <tr>
+    <td>
+  <input class="button" name="login" id="login" value="beitreten" type="submit">
+      </td>
+    </tr>
+    </table>
+  </form>
+  <?php
+}
+  
 }
 }
 }
@@ -783,6 +894,42 @@ echo '</tr>';
 }
 $result->close(); $db->close();
 echo '</table></center>';
+echo '<br/><br/><h3>Erstellen</h3>';     
+echo 'Info: Das Turnier findet nach der Erstellung nach genau 24 Stunden statt.<br>Es muss mindestens ein User sich am Erstellungstag angemeldet haben, sonst wird es gelöscht.<br>';
+echo '<center><form method="post" action="turnier.php?aktion=turnier"> <table>';
+echo '<tr>';
+echo '<td>Name</td><td>';
+echo '<div class="eingabe1">';
+echo '<input class="eingabe2" name="turniername" value="" size="15" maxlength="30" type="text">';   
+echo '</div>';
+echo '</td>';  
+echo '</tr>';    
+echo '<tr>';
+echo '<td>Preisgeld</td><td>';
+echo '<div class="eingabe1">';
+echo '<input class="eingabe2" name="turnierpreis" value="" size="15" maxlength="30" type="text">';   
+echo '</div>';
+echo '</td>';
+echo '</tr>';
+echo '<tr>';
+echo '<tr>';
+echo '<td>Passwort</td><td>';
+echo '<div class="eingabe1">';
+echo '<input class="eingabe2" name="password" value="" size="15" maxlength="30" type="text">';   
+echo '</div>';
+echo '</td>';
+echo '</tr>';
+echo '<tr>';
+echo '<td>Überall aus beitrittbar</td><td>';
+echo '<input class="cursor" type="checkbox" name="everywhere" value="everywhere">';
+echo '</td>';
+echo '</tr>';
+echo '<tr align=center>';
+echo '<td colspan="2" rowspan="1">';
+echo '<input class="button" name="login" id="login" value="erstellen" type="submit">';
+echo '</td>';
+echo '</tr>';;
+echo '</table></form></center><br>';  
 }
 if($turnier != 0&&time() > $uzeit){      
 echo '<br><center><table class="table" height="100%" cellspacing="0">';

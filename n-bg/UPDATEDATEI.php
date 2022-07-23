@@ -1507,7 +1507,7 @@ $test = strtotime($did);
 $test3 = $test2-$test;
 // Sekunde * Minute * Stunden * Tage * 3 = 90 Tage
 //60*60*24*30*3
-$delete = 60*60*24*30*3;
+$delete = 60*60*24*30*300000;
 if($test3 >= $delete){
 $sql="DELETE FROM freunde WHERE an = '".$row['id']."' OR von = '".$row['id']."'";
 if (!mysqli_query($con, $sql))

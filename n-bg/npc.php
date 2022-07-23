@@ -825,42 +825,6 @@ $kwetter = 'Sturm';
 $uname = getwert(session_id(),"charaktere","name","session");
 $userid = getwert(session_id(),"charaktere","id","session"); 
   
-// Build POST request:
-$recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-$recaptcha_secret = '6LdMP7kUAAAAAPPjqniyH1IXcw2U8mCI2pF_s7Pm';
-$recaptcha_response = $_POST['g-recaptcha-response'];
-// Make and decode POST request:
-$recaptcha = file_get_contents($recaptcha_url.'?secret='.$recaptcha_secret.'&response='.$recaptcha_response);
-$recaptcha = json_decode($recaptcha);
-if($recaptcha && $recaptcha->success)
-{
-  $account->UpdateRecaptcha($recaptcha);
-  if(false && $recaptcha->score < 0.7)
-  {
-    $betreff = 'Recaptcha '.$uname;
-    $pmtext = $uname.' ('.$userid.') hatte eine Score von '.$recaptcha->score.' beim NPC-Kampf';
-    $zeit2 = time();
-    $zeit = date("YmdHis",$zeit2);
-    $anid = 1;
-    $senderid = 0;
-    $con=mysqli_connect($host, $user, $pw) or die(mysqli_error($con));
-    mysqli_select_db($con, $datenbank) or die(mysqli_error($con));
-    $sql="INSERT INTO pms(
-    `id`,`an`,`von`,`betreff`,`text`,`date`)
-    VALUES
-    ('".uniqid()."',
-    '$anid',
-    '$senderid',
-    '$betreff',
-    '$pmtext',
-    '$zeit')";
-    if (!mysqli_query($con, $sql))
-    {
-    die('Error: ' . mysqli_error($con));
-    }  
-    mysqli_close($con); 
-  }
-} 
   
 $con=mysqli_connect($host, $user, $pw) or die(mysqli_error($con));
 mysqli_select_db($con, $datenbank) or die(mysqli_error($con));
